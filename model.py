@@ -1,12 +1,13 @@
-import numpy as np
 from sklearn import datasets
 from sklearn.linear_model import LinearRegression
 
-iris = datasets.load_iris()
-X = iris.data
-y = iris.target
 
-clf = LinearRegression()
-clf.fit(X,y)
+def evaluate_model():
+    iris = datasets.load_iris()
+    X = iris.data
+    y = iris.target
 
-print(clf.score(X,y))
+    clf = LinearRegression()
+    clf.fit(X, y)
+
+    return clf.score(X, y)
